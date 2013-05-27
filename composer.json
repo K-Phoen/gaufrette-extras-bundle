@@ -1,0 +1,22 @@
+{
+    "name": "kphoen/gaufrette-extras-bundle",
+    "description": "Integrates the gaufrette-extras library into Symfony",
+    "keywords": ["gaufrette", "extras"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kévin Gomez",
+            "email": "contact@kevingomez.fr",
+            "homepage": "http://www.kevingomez.fr/"
+        }
+    ],
+    "require": {
+        "symfony/symfony": ">=2.1.0",
+        "kphoen/gaufrette-extras": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "KPhoen\\GaufretteExtrasBundle": "" }
+    },
+    "target-dir": "KPhoen/GaufretteExtrasBundle"
+}
