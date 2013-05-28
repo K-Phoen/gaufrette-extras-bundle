@@ -18,6 +18,10 @@
             <argument type="service" id="knp_gaufrette.filesystem_map"/>
             <tag name="twig.extension" />
         </service>
+
+        <service id="gaufrette.form.image_type" class="KPhoen\GaufretteExtrasBundle\Form\Type\ImageType">
+            <tag name="form.type" alias="image" />
+        </service>
     </services>
 
 </container>

@@ -1,0 +1,17 @@
+{% extends 'form_div_layout.html.twig' %}
+
+{% block image_widget %}
+{% spaceless %}
+<div class="form_image">
+    {% if image_url is defined %}
+    <img src="{{ asset(image_url|resolve(gaufrette)) }}" alt="{{ image_alt }}"{% if image_height is not null %} height="{{ image_height }}"{% endif %}{% if image_width is not null %} width="{{ image_width }}"{% endif %}/>
+    {% else %}
+    {% trans from "KPhoenGaufretteExtrasBundle" %}form.image.no_image{% endtrans %}
+    {% endif %}
+</div>
+
+<div class="image_widget">
+    {{ block('form_widget') }}
+</div>
+{% endspaceless %}
+{% endblock %}

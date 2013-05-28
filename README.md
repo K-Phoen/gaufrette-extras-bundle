@@ -79,6 +79,34 @@ k_phoen_gaufrette_extras:
 ```
 
 
+Image form type
+---------------
+
+ImageType to show the previously uploaded image.
+
+Utilisation sample:
+
+```php
+<?php
+
+class MyFormType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder->add('avatar', 'image', array(
+            'gaufrette'             => 'avatars',
+            'image_path'            => 'avatar', // because there is a getAvatar() method in the data class
+
+            'image_alt'             => 'Avatar',
+            'image_width'           => '100px',
+            'image_height'          => '100px',
+            'no_image_placeholder'  => 'noImage.jpg',
+        ));
+    }
+}
+```
+
+
 License
 =======
 
