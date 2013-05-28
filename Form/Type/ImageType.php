@@ -46,13 +46,17 @@ class ImageType extends AbstractType
     public function buildView(FormView $view, FormInterface $form, array $options)
     {
         $parentData = $form->getParent()->getData();
-
         if ($parentData !== null) {
             $accessor = PropertyAccess::getPropertyAccessor();
 
             // set an "image_url" variable that will be available when rendering this field
-            $view->vars['image_url'] = $accessor->getValue($parentData, $options['image_path']);
-        } else if ($options['no_image_placeholder'] !== null) {
+            $url = $accessor->getValue($parentData, $options['image_path']);
+            if ($url !== null) {
+                $view->vars['image_url'] = $url;
+            }
+        }
+
+        if (empty($view->vars['image_url']) && $options['no_image_placeholder'] !== null) {
             $view->vars['image_url'] = $options['no_image_placeholder'];
         }
 
