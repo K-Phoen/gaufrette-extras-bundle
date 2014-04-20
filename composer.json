@@ -13,7 +13,7 @@
     ],
     "require": {
         "symfony/symfony": ">=2.1.0",
-        "kphoen/gaufrette-extras": "dev-master"
+        "kphoen/gaufrette-extras": "~1.0"
     },
     "autoload": {
         "psr-0": { "KPhoen\\GaufretteExtrasBundle": "" }

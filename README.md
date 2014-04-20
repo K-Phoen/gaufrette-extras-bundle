@@ -14,7 +14,7 @@ Just create a `composer.json` file for your project:
 ```json
 {
     "require": {
-        "kphoen/gaufrette-extras-bundle": "dev-master"
+        "kphoen/gaufrette-extras-bundle": "~1.0"
     }
 }
 ```
